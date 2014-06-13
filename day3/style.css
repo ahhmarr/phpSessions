@@ -1,0 +1,19 @@
+#firstDiv{
+	width:600px;
+	height:200px;
+	background-color:red;
+	padding:20px;
+	margin-top:300px;
+}
+p{
+	background-color:yellow;
+	font-family:"arial";
+	padding-top:20px;
+
+}
+.basicHeading{
+	font-family:"arial";
+	font-size:40px;
+	text-decoration:underline;
+	color:#ccc;
+}
