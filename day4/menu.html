@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu by list style</title>
+	<style>
+		ul {
+			list-style-type: none;
+		}
+		li {
+			background-color: red;
+			float:left;
+			padding:10px;
+			margin-left:40px;
+			width:100px;
+			text-align: center;
+			text-transform: capitalize;
+			color:#fff;
+			font-family: "arial";
+			opacity: .5;
+			border-radius: 5px;
+			box-shadow: 1px 2px 3px #ccc;
+		}
+		li:hover{
+			/*background-color: #4DD627;*/
+			cursor: pointer;
+			opacity: 1;
+		}
+		input[type="radio"]{
+			display:none;
+		}
+		label{
+			display:inline;
+			margin-top: 100px;
+			padding: 10px;
+			border:2px solid #fff;
+			background-color: #FFFFCA;
+			cursor: pointer;
+		}
+		input[type="radio"]:checked+label{
+			background-color:#5BC9FE;
+
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>home</li>
+		<li>about us</li>
+		<li>services</li>
+		<li>gallery</li>
+		<li>contact us</li>
+		
+		
+	</ul>
+	<br><br>
+	<h2>radio example</h2>
+	<!-- to test sibling css element -->
+	<input type="radio" name="option" id="first">
+	<label for="first">first radio</label>
+	<input type="radio" name="option" id="second">
+	<label for="second">second radio</label>
+	<input type="radio" name="option" id="third">
+	<label for="third">third radio</label>
+	<input type="radio" name="option" id="fourth">
+	<label for="fourth">fourth radio</label>
+</body>
+</html>
