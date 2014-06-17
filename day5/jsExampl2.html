@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	document.write("<table>");
+		for(x=1;x<=5;x++)
+		{
+			cls=(x%2==0)?"grey":"blue";
+			document.write("<tr class='"+cls+"'>");
+				for(y=1;y<=5;y++)
+				{
+					document.write("<td>"+x+"</td>");
+				}
+			document.write("</tr>");
+		}
+
+	document.write("</table>");
+	</script>
+	<style type="text/css">
+		.grey{
+			background-color:#ccc;
+		}
+		.blue {
+			background-color: #5CB0B9;
+		}
+		td {
+			padding:20px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>
