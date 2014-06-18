@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	function showColor()
+	{
+		var dv=document.getElementById("colorVal");
+		var clr=document.getElementById("clr");
+		var col=clr.value;
+		dv.innerHTML=col;
+
+	}
+	</script>
+	<style type="text/css">
+		#colorVal{
+			padding:10px;
+			font-size: 22px;
+			width:100%;
+			margin:0 auto;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<input type="color" name="" id="clr" onchange="showColor();">
+	<div id="colorVal"></div>
+</body>
+</html>
