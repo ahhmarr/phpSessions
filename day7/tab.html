@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript">
+	function show(th)
+	{
+		d1=document.querySelector("#d1");
+		d2=document.querySelector("#d2");
+		d3=document.querySelector("#d3");
+		d1.style.display="none";
+		d2.style.display="none";
+		d3.style.display="none";
+		var id=(th.id);
+		if(id=="t1")
+		{
+			d1.style.display="block";
+		}
+		else if(id=="t2")
+		{
+			d2.style.display="block";
+
+		}
+		else if(id=="t3")
+		{
+			d3.style.display="block";
+
+
+		}
+	}
+</script>
+<style type="text/css">
+	span{
+		display:inline-block;
+		width:80px;
+		background-color: #81E691;
+		border:2px solid #fff;
+		border-radius: 5px;
+		padding:10px;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+	.clear{
+		clear:both;
+	}
+	.hide{
+		display:none;
+	}
+	div{
+		width:300px;
+		height:200px;
+		padding:10px;
+		background-color:#EC6363;
+		color:#fff;
+		margin-top: 10px;
+	}
+</style>
+<body>
+	<span onclick="show(this)" id="t1">first</span>
+	<span onclick="show(this)" id="t2">second</span>
+	<span onclick="show(this)" id="t3">thoird</span>
+	<br><br>
+	<!-- tab div starts -->
+	<div id="d1">first div content</div>
+	<div id="d2" class="hide">second div content</div>
+	<div id="d3" class="hide">third div content</div>
+	<!-- tab div ends -->
+</body>
+</html>

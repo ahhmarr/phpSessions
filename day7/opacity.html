@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var op=document.querySelector("#toOpaque");
+		op.style.opacity=1;
+		console.log(op.style.opacity);
+		console.log("called on load of the window");
+	}
+	function plus()
+	{
+		var op=document.querySelector("#toOpaque");
+		var opacity=op.style.opacity;
+		console.log(opacity);
+		op.style.opacity=Number(opacity)+0.1;
+		console.log(op);
+	}
+	function minus()
+	{
+		var op=document.querySelector("#toOpaque");
+		var opacity=op.style.opacity;
+		op.style.opacity=opacity-0.1;
+		console.log(op.opacity);
+	}
+
+
+	</script>
+	<style>
+	#toOpaque{
+		background-color:#17C6E6;
+		padding:10px;
+		border-radius:5px;
+		height:100px;
+		width:500px;
+		box-shadow: 1px 2px 7px #ccc;
+	}
+	input[type="button"]
+	{
+		display:block;
+		padding:5px;
+		background-color: #ccc;
+		color:#fff;
+		width:50px;
+		height:50px;
+	}
+	</style>
+</head>
+<body>
+	<div id="toOpaque"> this is a dummy text wrapped in a DIV element to test the overall opacity of the HTML Elements</div>
+	<input type="button" value="+" onclick="plus()" >
+	<input type="button" value="-" onclick="minus()" >
+</body>
+</html>
