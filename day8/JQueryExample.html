@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery example</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$("#firstBox").click(function()
+		{
+			$("#firstBox").val("value changed due to click").css("background-color","red").css({
+				"height" :"100px",
+				"padding" : "10px"
+			});
+		
+		});
+		$("#exDiv").hover(function()
+		{
+			$("#exDiv").html("changed HTML");
+		});
+		$(".boxClass").click(function()
+		{
+			$(this).fadeOut("slow");
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="firstBox">
+	<div id="exDiv">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<style type="text/css">
+	.boxClass{
+		background-color: #2DD832;
+		padding:30px;
+		margin-top:10px;
+	}
+</style>
+	<div class="boxClass">first</div>
+	<div class="boxClass">secnd</div>
+	<div class="boxClass">third</div>
+</body>
+</html>

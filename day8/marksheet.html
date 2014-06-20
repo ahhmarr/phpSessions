@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>marksheet</title>
+	<script type="text/javascript">
+	function total()
+	{
+		var eng=Number(document.querySelector("#eng").value);
+		var hin=Number(document.querySelector("#hin").value);
+		var comp=Number(document.querySelector("#comp").value);
+		var sci=Number(document.querySelector("#sci").value);
+		var math=Number(document.querySelector("#math").value);
+		var total=eng+hin+sci+math+comp;
+		var tot=document.querySelector("#tot");
+		var average=document.querySelector("#avg");
+		var avg=Math.round(total/5);
+		var res=document.querySelector("#result");
+		var result="";
+		tot.value=total;
+		average.value=avg+"%";
+		if(avg>=90)
+		{
+			result="A";
+
+		}
+		else if(avg>=80)
+		{
+			result="B";
+		}
+		else if(avg>=60)
+		{
+			result="C";
+		}
+		else if(avg>=40)
+		{
+			result="D";
+		}
+		else
+		{
+			result="FAIL";
+		}
+		res.value=result;
+
+	}
+	</script>
+	<style type="text/css">
+		p{
+			width:800px;
+			padding:10px;
+			margin:0 auto;
+		}
+		label {
+			width:200px;
+			display: inline-block;
+			font-size: 20px;
+		}
+		input[type="text"]
+		{
+			height:30px;
+
+		}
+	</style>
+</head>
+<body>
+	<p>
+		<label for="name">name</label>
+		<input type="text" name="name" id="name">
+	</p>
+	<p><label for="class">class</label><input type="text" name="class" id="class"></p>
+	<h3>Marks Summary</h3>
+	<p><label for="eng">English</label><input type="text" class="subj" onchange="total()" name="eng" id="eng"></p>
+	<p><label for="hin">hindi</label><input type="text" class="subj" onchange="total()" name="hin" id="hin"></p>
+	<p><label for="comp">computer</label><input type="text" class="subj" onchange="total()" name="comp" id="comp"></p>
+	<p><label for="sci">science</label><input type="text" class="subj" onchange="total()" name="sci" id="sci"></p>
+	<p><label for="math">maths</label><input type="text" class="subj" onchange="total()" name="math" id="math"></p>
+	<p><label for="tot">total</label><input type="text" name="tot" id="tot"></p>
+	<p><label for="avg">Average</label><input type="text" name="avg" id="avg"></p>
+	<p><label for="result">result</label><input type="text" name="result" id="result"></p>
+</body>
+</html>

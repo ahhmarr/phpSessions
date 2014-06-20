@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cal demo</title>
+	<script type="text/javascript">
+	function populate(th)
+	{
+		var txt=document.querySelector("#no");
+		var textVal=txt.value;
+		var value=th.value;
+		txt.value=textVal+value;
+	}
+	function reset()
+	{
+		document.querySelector("#no").value="";
+	}
+	function result()
+	{
+		var txt=document.querySelector("#no");
+		txt.value=eval(txt.value);
+	}
+	</script>
+</head>
+<body>
+ <input type="text" name="" id="no">
+	<table>
+		<tr>
+			<td><input type="button" value="1" onclick="populate(this)" > </td>
+			<td><input type="button" value="2" onclick="populate(this)" > </td>
+			<td><input type="button" value="3" onclick="populate(this)" > </td>
+			<td><input type="button" value="4" onclick="populate(this)" > </td>
+			<td><input type="button" value="5" onclick="populate(this)" > </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="6" onclick="populate(this)" > </td>
+			<td><input type="button" value="7" onclick="populate(this)" > </td>
+			<td><input type="button" value="8" onclick="populate(this)" > </td>
+			<td><input type="button" value="9" onclick="populate(this)" > </td>
+			<td><input type="button" value="0" onclick="populate(this)" > </td>
+		</tr>
+		<tr>
+			<td><input type="button" value="+" onclick="populate(this)" > </td>
+			<td><input type="button" value="-" onclick="populate(this)" > </td>
+			<td><input type="button" value="/" onclick="populate(this)" > </td>
+			<td><input type="button" value="CE" onclick="reset()" > </td>
+			<td><input type="button" value="=" onclick="result()" > </td>
+		</tr>
+	</table>
+</body>
+</html>
