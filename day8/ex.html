@@ -1,0 +1,60 @@
+
+<html>
+  <head>
+    <title>Working Calculator</title>
+	<style type="text/css">
+	body
+	{
+	  background-color:#c0c0c0;
+	}
+	table
+	{
+	  background-color:#00ff40;
+	  color:#0b1375;
+	  text-align:center;
+	  border-color:804040;
+	}
+	</style>
+  </head>
+  <body>
+    <input type="text" name="" id="no">
+    <table>
+	  <tr><td>
+	    <input type="button" value="1" onclick="populate(this)">
+		<input type="button" value="2" onclick="populate(this)">
+		<input type="button" value="3" onclick="populate(this)">
+		<input type="button" value="+" onclick="populate(this)"><br/>
+		<input type="button" value="4" onclick="populate(this)">
+		<input type="button" value="5" onclick="populate(this)">
+		<input type="button" value="6" onclick="populate(this)">
+		<input type="button" value="-" onclick="populate(this)"><br/>
+		<input type="button" value="7" onclick="populate(this)">
+		<input type="button" value="8" onclick="populate(this)">
+		<input type="button" value="9" onclick="populate(this)">
+		<input type="button" value="x" onclick="populate()"><br/>
+		<input type="button" value="c" onclick="reset()">
+		<input type="button" value="0" onclick="populate(this)">
+		<input type="button" value="=" onclick="result()">
+		<input type="button" value="/" onclick="populate(this)">
+	  </td></tr>
+	</table>
+	<script type="text/javascript">
+	 function populate(th)
+	 {
+	   var txt=document.querySelector("#no");
+	   var txtVal=txt.value;
+	   var val=th.value;
+	   txt.value=txtVal+val;
+	 }
+	 function reset()
+	 {
+	  document.querySelector("#no").value="";
+	 }
+	 function result()
+	 {
+	    var txt=document.querySelector("#no");
+		txt.value=eval(txt.value);
+	 }
+	</script>
+  </body>
+</html>
