@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slave box</title>
+	<style type="text/css">
+		#container{
+			width:600px;
+			margin:0 auto;
+
+		}
+		#slaveBox{
+			background-color: #5AD8F3;
+			width:40%;
+			height: 50px;
+			padding:10px;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+	function moveIT(th)
+	{
+		var ref = document.querySelector("#slaveBox");
+		var id=th.id;
+		var move={
+			down : function(ref)
+			{
+				var tempMargin=ref.style.marginTop;
+				//to perform calc we have to remove the "px" string from the margin
+				tempMargin=tempMargin.replace("px","");
+				tempMargin=Number(tempMargin);
+				tempMargin+=10;
+				ref.style.marginTop=tempMargin+"px";
+				console.log(ref);
+
+			},
+			up :function(ref)
+			{
+				var tempMargin=ref.style.marginTop;
+				//to perform calc we have to remove the "px" string from the margin
+				tempMargin=tempMargin.replace("px","");
+				tempMargin=Number(tempMargin);
+				tempMargin-=10;
+				ref.style.marginTop=tempMargin+"px";
+			},
+			left : function(ref)
+			{
+				var tempMargin=ref.style.marginLeft;
+				//to perform calc we have to remove the "px" string from the margin
+				tempMargin=tempMargin.replace("px","");
+				tempMargin=Number(tempMargin);
+				tempMargin+=10;
+				ref.style.marginLeft=tempMargin+"px";
+			},
+			right : function(ref)
+			{
+				var tempMargin=ref.style.marginLeft;
+				//to perform calc we have to remove the "px" string from the margin
+				tempMargin=tempMargin.replace("px","");
+				tempMargin=Number(tempMargin);
+				tempMargin-=10;
+				ref.style.marginLeft=tempMargin+"px";
+			},
+			reset : function(ref)
+			{
+				ref.style.margin="0px";
+			}
+		};
+		//it is an object with functions with the same as the id of the buttons
+		move[id](ref);
+	}
+
+	</script>
+</head>
+<body>
+	<div id="container">
+		
+		<div>
+			<input type="button" onclick="moveIT(this)" name="" value="up" id="up">
+			<input type="button" onclick="moveIT(this)" name="" value="down" id="down">
+			<input type="button" onclick="moveIT(this)" name="" value="left" id="left">
+			<input type="button" onclick="moveIT(this)" name="" value="right" id="right">
+			<input type="button" onclick="moveIT(this)" name="" value="reset" id="reset">
+		</div>
+		<div id="slaveBox">control box</div>
+
+	</div>
+</body>
+</html>
