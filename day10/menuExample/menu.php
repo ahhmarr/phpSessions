@@ -45,24 +45,12 @@
 </head>
 <body>
 	<ul>
-		<li>home</li>
-		<li>about us</li>
-		<li>services</li>
-		<li>gallery</li>
-		<li>contact us</li>
+		<li><a href="home.php">home</a></li>
+		<li><a href="about.php">about us</a></li>
+		<li><a href="service.php">services</a></li>
+		<li><a href="contact.php">contact us</a></li>
 		
 		
 	</ul>
 	<br><br>
-	<h2>radio example</h2>
-	<!-- to test sibling css element -->
-	<input type="radio" name="option" id="first">
-	<label for="first">first radio</label>
-	<input type="radio" name="option" id="second">
-	<label for="second">second radio</label>
-	<input type="radio" name="option" id="third">
-	<label for="third">third radio</label>
-	<input type="radio" name="option" id="fourth">
-	<label for="fourth">fourth radio</label>
-</body>
-</html>
+	
