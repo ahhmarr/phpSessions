@@ -21,7 +21,7 @@
 </style>
 <body>
 <h1>Create a New Blog</h1>
-	<form action="addBlog.php" method="post">
+	<form action="addBlog.php" method="post" enctype="multipart/form-data">
 		<p>
 			<label for="title">Blog Title</label>
 			<input type="text" name="title" id="title" placeholder="blog title">
@@ -29,6 +29,10 @@
 		<p>
 			<label for="content">content</label>
 			<textarea  name="content" id="content"></textarea>
+		</p>
+		<p>
+			<label for="file">file</label>
+			<input type="file"  name="img" id="file">
 		</p>
 		<p><label for=""></label>
 			<input type="submit" value="Create Blog">
